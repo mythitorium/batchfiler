@@ -14,7 +14,9 @@ In the very rare chance you care about installing this:
 
 1. Install [pyperclip](https://github.com/asweigart/pyperclip)
 
-    py -3 -m pip install -U pyperclip
+```
+py -3 -m pip install -U pyperclip
+```
 
 2. Download and extract batchfiler's source.
 
