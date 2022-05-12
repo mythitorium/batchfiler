@@ -12,8 +12,8 @@ cfg = {
     "output_path" : ""
 }
 
-value_pattern_list = [r"^prefix:",r"^suffix:",r"^filter:",
-                    r"^output_file_name:",r"^output_file_path:"]
+value_pattern_list = [r"^prefix=",r"^suffix=",r"^filter=",
+                    r"^output_file_name=",r"^output_file_path="]
 
 
 def main():
@@ -21,8 +21,8 @@ def main():
     try:
         config = open("config.ini", "x")
         content = ["[config]\n",
-            "prefix:\n","suffix:\n","filter:\n",
-            "output_name:\n","output_path:\n"]
+            "prefix=\n","suffix=\n","filter=\n",
+            "output_name=\n","output_path=\n"]
         config.writelines(content)
         config.close()
         print("Creating config file...")
@@ -38,7 +38,7 @@ def main():
     for value in config_values:
         for index in range(0,len(value_pattern_list)):
             if re.match(value_pattern_list[index], value):
-                cfg[cfg_keys[index]] = value.split(":", 1)[1].strip()
+                cfg[cfg_keys[index]] = value.split("=", 1)[1].strip()
 
     # Print results
     print("--------")

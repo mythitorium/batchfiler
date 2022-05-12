@@ -39,11 +39,11 @@ A .ini file containing the following will be created when running the script for
 
 ```ini
 [config]
-prefix:
-suffix:
-filter:
-output_file_name:
-output_file_path:
+prefix=
+suffix=
+filter=
+output_file_name=
+output_file_path=
 ```
 
 Edit the values to customize the script's behavior.
